@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/", // ✅ Add this line for Vercel deployment
   server: {
     host: "::",
     port: 8080,
