@@ -9,11 +9,17 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [
-    react(), // Only React plugin, no Lovable
+    react(),
   ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      // Optional: externalize modules if needed
+      // external: ["html2canvas", "sonner"],
     },
   },
 });
